@@ -1,4 +1,4 @@
-from .base_options import BaseOptions
+from .base_face2mask_options import BaseOptions
 
 
 class TestOptions(BaseOptions):
@@ -17,7 +17,6 @@ class TestOptions(BaseOptions):
         parser.add_argument('--num_test', type=int, default=50, help='how many test images to run')
         
         parser.add_argument('--testdata', type=str, required=True, help='test image for input')
-        parser.set_defaults(dataroot='./datasets/tmp')
         
         # rewrite devalue values
         parser.set_defaults(model='test')
